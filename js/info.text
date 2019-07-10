@@ -1,0 +1,54 @@
+  /*
+  Trabajo de Banco
+  - Para que nuestra funcion ande dinamicamente, tiene que tener como parametro un array de tarjetas. Asi, no importa
+  si el usuario tiene una tarjeta o diez
+  */
+
+  /*
+  Funcion print Initial Data
+  responsabilidades: busca la data inicial - la imprime en pantalla
+
+  - primero creo una variable que almacene la informacion del nodo en donde voy a imprimir la informacion
+  - los nodos como tal tienen ciertos metodos (ejemplo innerText - innerHTML)
+  - Lo siguiente seria sumarle opciones al select, con los nombres de las tarjetas.
+  - Por cada una de las tarjetas, voy a crear un option con el metodo createElement (metodo de document)
+  - En este momento el option solo esta creado, pero no appendeado. 
+  - El appendChild soluciona esto
+  - GENIAL! Ya imprimiste los nombres en pantalla como opciones
+  - Los selects no? tienen values (html), para que sea inequivoco cuando empiezo a trabajar con los selects, les doy
+   como value tambien su nombre (option.value = card.brand)
+  */
+
+  /* Variable currentCard :
+   - guarda la tarjeta de credito que la persona que esta usando en ese momento
+   - el valor inicial / por defecto es la primer tarjeta:
+   data.cards[0].brand
+   - esto solo sirve en el vamos, al momento de cambiar la tarjeta esto cambia
+   */
+
+/* Funcion change Card
+responsabilidades: guardar el cambio de tarjeta que hizo la persona
+
+- Evento on-change (de los selects) que se dispara cuando la persona selecciona otra opcion distinta a la que estaba
+predeterminada
+- (event.target) te muestra el elemento html que disparó ese evento
+-Capturo el dato con el cual se modifico la tarjeta seleccionada (onchange)
+- Con este dato, puedo ir a mi variable current card y decir ey! te cambiaron
+const changeCard () => {
+    currentCard = event.target.value
+    printInitialData()
+}
+!!!  RECORDAR LIMPIAR EL INNER HTML DEL SELECT PARA QUE NO SE IMPRIMAN REPETIDAS VECES !!!!
+
+*/
+
+/* Funcion print current card
+responsabilidades: imprimir la informacion correspondiente de la tarjeta seleccionada
+
+// NOSOTRAS
+
+Imprimir el nombre de la tarjeta, el saldo y la fecha de vencimieto
+ lo resolvi creando un elemento html por cada propiedad y appendeandola
+
+
+*/
