@@ -34,11 +34,37 @@ body{
     padding: 30px;
     margin: 0 auto;
     box-sizing: border-box;
-
-    border: 1px solid #979797;
+    border: 1px solid grey;
     border-radius: 8px;
-    background-color: #fff;
-
+    background-color: white;
     justify-content: center;
+    .menu-container{
+        display: block;
+        width: 35%;
+        padding-right: 20px;
+        align-items: center;
+    }
+    .print-info{
+        display: flex;
+        flex-flow: column;
+        width: 65%;
+        box-sizing: border-box;
+        text-align: center;
+        color: black;
+        border: 1px solid $aquamarine;
+        border-radius: 8px;
+        background-color: $aquamarine;
+        align-items: center;
+        .card-icon{
+            width: 8em;
+            padding: 10px;
+        }
+        #payment{
+            width: 100%;
+            display: block;
+            color: black;
+            align-items: center;
+        }
+    }
 }
 
