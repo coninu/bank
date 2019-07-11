@@ -1,16 +1,14 @@
+    
 /*
 - EL usuario debe poder visualizar su informacion personal y los datos de sus tarjetas de crédito, mostrando una a 
 la vez y permitiendole cambiar entre ellas
-
 - para cada tarjeta se debe mostrar la fecha de vencimiento, la deduda en cada moneda existente y ofrecer el pago en 
 una moneda elejida segun las cuentas de la persona.
   - Si la persona tiene cuenta en pesos se le debe ofrecer pagar toda su deuda en esa moneda, convirtiendo el valor
    el valor de     cualquier deuda en otra moneda a pesos y sumandolo al total a pagar.
   - Si la persona tiene cuenta en dolares hay que hace lo mismo en el punto anterior pero convirtiendo todo a dolares. 
-
 - la persona debe poder elegir una opcion de monto a pagar entre total o pago minimo (tiene pago minimo). en caso de
  hacer el pago minimo hay que mostrar el saldo restante.
-
 tip: las opcionnes de moneda a pagar y monto de pago podrian mostrarse como selectes independientes en los que le
  sumamos diferentes options segun las condiciones y las opciones conn las que el usuario pueda contar. 
 */
@@ -76,15 +74,24 @@ const printCurrentCard = () => {
   let card = data.cards.find( 
     e => e.brand === currentCard
   )
+  // creacion de elementos con informacion de la tarjeta
   let title = document.createElement('h3')
   let date = document.createElement('p')
-  let moneyDebt = document.createElement('p')
+  let pesosBalance = document.createElement('p')
+  let dollarsBalance = document.createElement('p')
   title.innerText = card.brand
   date.innerText = `Fecha de expiración: ${card.expirationDate}`
-  moneyDebt.innerText = card.pesosDebt
+  pesosBalance.innerText = `Saldo a pagar en pesos: $ ${card.pesosDebt}`
+  dollarsBalance.innerText = `Saldo a pagar en dólares: US$ ${card.dollarsDebt}`
   container.appendChild(title)
   container.appendChild(date)
-  container.appendChild(moneyDebt)
+  // hasta acá apendea si o si (nombre tarjeta y expiracion)
+
+  // funcion para saber si tiene o no cuenta en pesos/dolares
+
+
+  container.appendChild(pesosBalance)
+  container.appendChild(dollarsBalance)
 }
 
 const changeCard = () => {
