@@ -87,11 +87,18 @@ const printCurrentCard = () => {
   container.appendChild(date)
   // hasta acá apendea si o si (nombre tarjeta y expiracion)
 
-  // funcion para saber si tiene o no cuenta en pesos/dolares
+  // funcion para saber si tiene o no cuenta en pesos/dolares - ver como mejorar
+  if (card.pesosDebt >0){
+    container.appendChild(pesosBalance)
+  } else {null}
+
+  if (card.dollarsDebt >0){
+    container.appendChild(dollarsBalance)
+  } else {null}
 
 
-  container.appendChild(pesosBalance)
-  container.appendChild(dollarsBalance)
+  //container.appendChild(pesosBalance)
+  //container.appendChild(dollarsBalance)
 }
 
 const changeCard = () => {
