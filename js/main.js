@@ -96,9 +96,6 @@ const printCurrentCard = () => {
     container.appendChild(dollarsBalance)
   } else {null}
 
-
-  //container.appendChild(pesosBalance)
-  //container.appendChild(dollarsBalance)
 }
 
 const changeCard = () => {
